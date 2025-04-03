@@ -3,7 +3,7 @@ import { Card, CardContent } from '@/components/ui/card';
 
 const testimonials = [
   {
-    name: "Shélcia Lélis",
+    name: "Edna Stela",
     title: "Proprietária de Pequeno Negócio",
     content: "A Kargoo transformou a maneira como envio produtos internacionalmente. O processo é simples, as tarifas são competitivas e meus clientes estão satisfeitos com os tempos rápidos de entrega.",
     image: "/order-approve.svg"
