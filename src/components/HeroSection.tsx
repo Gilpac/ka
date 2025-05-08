@@ -15,7 +15,8 @@ const HeroSection = () => {
               A maneira mais fácil de enviar pacotes internacionalmente. Soluções de envio rápidas, confiáveis e acessíveis para todos.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
-              <Button size="lg" className="bg-shappi-green hover:bg-shappi-green/90 rounded-full text-base px-6 btn-hover-effect">
+              <Button size="lg" className="bg-shappi-green hover:bg-shappi-green/90 rounded-full text-base px-6 btn-hover-effect"
+               onClick={() => window.location.href = "http://ka.free.nf/log/index.html"}>
                 Comece Agora
               </Button>
               <Button variant="outline" size="lg" className="rounded-full text-base px-6 group btn-hover-effect">
