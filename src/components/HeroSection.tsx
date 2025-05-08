@@ -39,7 +39,7 @@ const HeroSection = () => {
               <img 
                 src="/lovable-uploads/checking.svg" 
                 alt="Kargoo Delivery Services" 
-                className="w-full h-auto max-w-xl mx-auto animate-float hover:animate-pulse-slow transition-all duration-500"
+                className="w-full h-auto max-w-xl mx-auto animate-float hover:animate-pulse-slow transition-all duration-700"
               />
             </div>
           </div>
