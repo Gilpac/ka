@@ -5,7 +5,7 @@ const steps = [
   {
     number: "01",
     title: "Crie uma conta",
-    description: "Crie uma conta gratuita Shappi em apenas alguns minutos. Sem taxas de assinatura ou compromissos necessários."
+    description: "Crie uma conta gratuita na Kargoo em apenas alguns minutos. Sem taxas de assinatura ou compromissos necessários."
   },
   {
     number: "02",
@@ -50,7 +50,8 @@ const HowItWorksSection = () => {
         </div>
 
         <div className="text-center">
-          <Button size="lg" className="bg-shappi-green hover:bg-shappi-green/90 rounded-full px-8 btn-hover-effect">
+          <Button size="lg" className="bg-shappi-green hover:bg-shappi-green/90 rounded-full px-8 btn-hover-effect"
+          >
             Comece Agora
           </Button>
         </div>
