@@ -82,18 +82,18 @@
 
 @layer components {
   .header-link {
-    @apply text-kargoo-dark font-medium hover:text-kargoo-green transition-colors;
+    @apply text-shappi-dark font-medium hover:text-shappi-green transition-colors;
   }
   
   .gradient-text {
-    @apply text-transparent bg-clip-text bg-kargoo-gradient;
+    @apply text-transparent bg-clip-text bg-shappi-gradient;
   }
   
   .section-padding {
     @apply py-16 md:py-24;
   }
   
-  .kargoo-container {
+  .shappi-container {
     @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
   }
   

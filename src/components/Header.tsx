@@ -17,7 +17,7 @@ const Header = () => {
 
   return (
     <header className="sticky top-0 z-50 bg-white/80 backdrop-blur-sm border-b border-gray-100">
-      <div className="kargoo-container py-4">
+      <div className="shappi-container py-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center">
             <Link to="/" className="flex items-center">
@@ -51,18 +51,7 @@ const Header = () => {
             >
               Como funciona
             </a>
-            <Link 
-              to="/simulacao" 
-              className={`header-link font-medium ${location.pathname === '/simulacao' ? 'text-kargoo-green' : ''}`}
-            >
-              Simulação
-            </Link>
-            <Link 
-              to="/transportadores" 
-              className={`header-link font-medium ${location.pathname === '/transportadores' ? 'text-kargoo-green' : ''}`}
-            >
-              Transportadores
-            </Link>
+            <Link to="/simulacao" className="header-link font-medium text-shappi-green">Simulação</Link>
             <a 
               href={location.pathname === '/' ? '#faq' : '/#faq'} 
               className="header-link"
@@ -75,7 +64,7 @@ const Header = () => {
             </a>
             <div className="flex items-center space-x-4">
               <Button 
-                className="bg-kargoo-green hover:bg-kargoo-green/90 btn-hover-effect"
+                className="bg-shappi-green hover:bg-shappi-green/90 btn-hover-effect"
                 onClick={() => window.location.href = "http://ka.free.nf/log/index.html"}
               >
                 Começar
@@ -116,18 +105,7 @@ const Header = () => {
             >
               Como funciona
             </a>
-            <Link 
-              to="/simulacao" 
-              className={`header-link font-medium ${location.pathname === '/simulacao' ? 'text-kargoo-green' : ''}`}
-            >
-              Simulação
-            </Link>
-            <Link 
-              to="/transportadores" 
-              className={`header-link font-medium ${location.pathname === '/transportadores' ? 'text-kargoo-green' : ''}`}
-            >
-              Transportadores
-            </Link>
+            <Link to="/simulacao" className="header-link font-medium text-shappi-green">Simulação</Link>
             <a 
               href={location.pathname === '/' ? '#faq' : '/#faq'} 
               className="header-link"
@@ -140,7 +118,7 @@ const Header = () => {
             </a>
             <div className="flex flex-col space-y-2 pt-2">
               <Button 
-                className="bg-kargoo-green hover:bg-kargoo-green/90 w-full"
+                className="bg-shappi-green hover:bg-shappi-green/90 w-full"
                 onClick={() => window.location.href = "http://ka.free.nf/log/index.html"}
               >
                 Começar

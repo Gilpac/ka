@@ -30,7 +30,7 @@ const PageLayout = ({ children, title, fullWidth = false }: PageLayoutProps) => 
     <div className="min-h-screen flex flex-col">
       <Header />
       <main className="flex-grow">
-        <div className={`kargoo-container py-10 ${fullWidth ? 'max-w-full' : ''}`}>
+        <div className={`shappi-container py-10 ${fullWidth ? 'max-w-full' : ''}`}>
           <h1 className="text-4xl font-bold mb-8">{title}</h1>
           {children}
         </div>

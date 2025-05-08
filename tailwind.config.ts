@@ -53,7 +53,7 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
-				kargoo: {
+				shappi: {
 					green: "#4F8A10",
 					"green-light": "#b7e4a4",
 					"green-medium": "#8DC73F",
@@ -101,7 +101,7 @@ export default {
 			},
 			backgroundImage: {
 				'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-				'kargoo-gradient': 'linear-gradient(90deg, #4F8A10 0%, #b7e4a4 100%)',
+				'shappi-gradient': 'linear-gradient(90deg, #4F8A10 0%, #b7e4a4 100%)',
 			}
 		}
 	},

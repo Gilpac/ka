@@ -7,7 +7,6 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import Simulacao from "./pages/Simulacao";
-import Transportadores from "./pages/Transportadores";
 
 // Company pages
 import About from "./pages/company/About";
@@ -38,7 +37,6 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/simulacao" element={<Simulacao />} />
-          <Route path="/transportadores" element={<Transportadores />} />
           
           {/* Company Routes */}
           <Route path="/sobre" element={<About />} />
