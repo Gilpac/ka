@@ -18,15 +18,10 @@ const HeroSection = () => {
               <Button size="lg" className="bg-shappi-green hover:bg-shappi-green/90 rounded-full text-base px-6 btn-hover-effect">
                 Comece Agora
               </Button>
-              
-              <a href="#how-it-works">
               <Button variant="outline" size="lg" className="rounded-full text-base px-6 group btn-hover-effect">
-                
                 <span>Como Funciona</span>
-                
                 <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
               </Button>
-              </a>
             </div>
             <div className="flex items-center space-x-4 pt-4">
               <div className="flex -space-x-2">
@@ -42,9 +37,9 @@ const HeroSection = () => {
           <div className="lg:w-1/2">
             <div className="relative">
               <img 
-                src="/lovable-uploads/checking.svg" 
+                src="/lovable-uploads/8d626038-57cc-4db5-9753-f2580d1eb05b.png" 
                 alt="Kargoo Delivery Services" 
-                className="w-full h-auto max-w-xl mx-auto animate-float hover:animate-pulse-slow transition-all duration-99"
+                className="w-full h-auto max-w-xl mx-auto animate-float hover:animate-pulse-slow transition-all duration-300"
               />
             </div>
           </div>

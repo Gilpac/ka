@@ -5,7 +5,7 @@ const steps = [
   {
     number: "01",
     title: "Crie uma conta",
-    description: "Crie uma conta gratuita na Kargoo em apenas alguns segundos. Sem taxas de assinatura ou compromissos necessários."
+    description: "Crie uma conta gratuita Shappi em apenas alguns minutos. Sem taxas de assinatura ou compromissos necessários."
   },
   {
     number: "02",
@@ -15,7 +15,7 @@ const steps = [
   {
     number: "03",
     title: "Imprima sua etiqueta",
-    description: "Imprima sua etiqueta com o ID exclusivo do envio e agilize o processo de despacho."
+    description: "Assim que o pagamento for confirmado, imprima sua etiqueta de envio e anexe-a ao seu pacote."
   },
   {
     number: "04",
@@ -50,11 +50,9 @@ const HowItWorksSection = () => {
         </div>
 
         <div className="text-center">
-        <a href="http://ka.free.nf/log/index.html?i=1" target="_blank" rel="noopener noreferrer">
           <Button size="lg" className="bg-shappi-green hover:bg-shappi-green/90 rounded-full px-8 btn-hover-effect">
             Comece Agora
           </Button>
-          </a>
         </div>
       </div>
     </section>

@@ -3,22 +3,22 @@ import { Card, CardContent } from '@/components/ui/card';
 
 const testimonials = [
   {
-    name: "Edna Stela",
+    name: "Sarah Johnson",
     title: "Proprietária de Pequeno Negócio",
-    content: "A Kargoo transformou a maneira como envio produtos internacionalmente. O processo é simples, as tarifas são competitivas e meus clientes estão satisfeitos com os tempos rápidos de entrega.",
-    image: "/order-approve.svg"
+    content: "A Shappi transformou a maneira como envio produtos internacionalmente. O processo é simples, as tarifas são competitivas e meus clientes estão satisfeitos com os tempos rápidos de entrega.",
+    image: "/placeholder.svg"
   },
   {
-    name: "Wilson Bula",
+    name: "Michael Chen",
     title: "Vendedor de E-commerce",
-    content: "Como alguém que envia regularmente para vários países, a Kargoo tem sido um divisor de águas. O painel é fácil de usar e as atualizações de rastreamento são confiáveis.",
-    image: "/order-approve.svg"
+    content: "Como alguém que envia regularmente para vários países, a Shappi tem sido um divisor de águas. O painel é fácil de usar e as atualizações de rastreamento são confiáveis.",
+    image: "/placeholder.svg"
   },
   {
-    name: "Justina Lopes",
+    name: "Emily Rodriguez",
     title: "Remetente Frequente",
-    description: "Uso a Kargoo para enviar pacotes de cuidados para a família no exterior. Os preços transparentes e o excelente suporte ao cliente tornam o envio internacional livre de estresse.",
-    image: "/order-approve.svg"
+    description: "Uso a Shappi para enviar pacotes de cuidados para a família no exterior. Os preços transparentes e o excelente suporte ao cliente tornam o envio internacional livre de estresse.",
+    image: "/placeholder.svg"
   }
 ];
 
@@ -31,7 +31,7 @@ const TestimonialsSection = () => {
             O Que Nossos Clientes <span className="gradient-text">Dizem</span>
           </h2>
           <p className="text-lg text-gray-600">
-            Milhares de indivíduos e empresas confiam na Kargoo para suas necessidades de envio internacional.
+            Milhares de indivíduos e empresas confiam na Shappi para suas necessidades de envio internacional.
           </p>
         </div>
 

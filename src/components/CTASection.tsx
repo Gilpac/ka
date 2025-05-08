@@ -13,11 +13,12 @@ const CTASection = () => {
             Junte-se a milhares de clientes satisfeitos que confiam na Kargoo para suas necessidades de envio internacional.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <a href="http://ka.free.nf/log/index.html?i=1" target="_blank" rel="noopener noreferrer">
             <Button size="lg" className="bg-white text-shappi-green hover:bg-gray-100 rounded-full px-8 btn-hover-effect">
               Comece Agora
             </Button>
-            </a>
+            <Button variant="outline" size="lg" className="rounded-full border-white text-white hover:bg-white/10 px-8 btn-hover-effect">
+              Fale com Vendas
+            </Button>
           </div>
         </div>
       </div>

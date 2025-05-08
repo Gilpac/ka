@@ -11,12 +11,12 @@ const featuresData = [
   {
     icon: <Truck className="h-10 w-10 text-shappi-green-medium" />,
     title: "Entrega Rápida",
-    description: "Receba seu pedido com agilidade e eficiência, diretamente na sua porta em tempo recorde."
+    description: "Opções de envio expresso disponíveis com informações de rastreamento confiáveis."
   },
   {
     icon: <CreditCard className="h-10 w-10 text-shappi-gray" />,
     title: "Preços Transparentes",
-    description: "Sem surpresas! Oferecemos preços claros e justos, para você saber exatamente o que está pagar."
+    description: "Sem taxas ocultas. Obtenha tarifas de envio claras antes de enviar seu pacote."
   },
   {
     icon: <Clock className="h-10 w-10 text-shappi-green" />,
@@ -27,10 +27,6 @@ const featuresData = [
     icon: <Shield className="h-10 w-10 text-shappi-green-medium" />,
     title: "Proteção de Pacotes",
     description: "Cobertura de seguro opcional para seus envios valiosos."
-  }, {
-    icon: <Clock className="h-10 w-10 text-shappi-green" />,
-    title: "Sempre ao Seu lado 24/7",
-    description: "Conte conosco a qualquer momento, estamos sempre aqui para auxiliar você."
   }
 ];
 
@@ -43,7 +39,7 @@ const FeaturesSection = () => {
             Envie Com <span className="gradient-text">Confiança</span>
           </h2>
           <p className="text-lg text-gray-600">
-            A Kargoo fornece uma solução completa de envio internacional com recursos projetados para tornar o envio simples e sem estresse.
+            A Shappi fornece uma solução completa de envio internacional com recursos projetados para tornar o envio simples e sem estresse.
           </p>
         </div>
 
@@ -54,10 +50,10 @@ const FeaturesSection = () => {
                 <div className="mb-4 animate-pulse-slow">{feature.icon}</div>
                 <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
                 <p className="text-gray-600 mb-4">{feature.description}</p>
-                {/* <a href="#" className="text-shappi-green flex items-center font-medium group">
+                <a href="#" className="text-shappi-green flex items-center font-medium group">
                   <span>Saiba mais</span>
                   <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-                </a> */}
+                </a>
               </CardContent>
             </Card>
           ))}
