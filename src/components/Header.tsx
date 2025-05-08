@@ -15,9 +15,6 @@ const Header = () => {
     }
   };
 
-  // Check if the current path is simulação
-  const isSimulacao = location.pathname === '/simulacao';
-
   return (
     <header className="sticky top-0 z-50 bg-white/80 backdrop-blur-sm border-b border-gray-100">
       <div className="kargoo-container py-4">
@@ -56,7 +53,7 @@ const Header = () => {
             </a>
             <Link 
               to="/simulacao" 
-              className={`header-link font-medium ${isSimulacao ? 'text-kargoo-green' : ''}`}
+              className={`header-link font-medium ${location.pathname === '/simulacao' ? 'text-kargoo-green' : ''}`}
             >
               Simulação
             </Link>
@@ -121,7 +118,7 @@ const Header = () => {
             </a>
             <Link 
               to="/simulacao" 
-              className={`header-link font-medium ${isSimulacao ? 'text-kargoo-green' : ''}`}
+              className={`header-link font-medium ${location.pathname === '/simulacao' ? 'text-kargoo-green' : ''}`}
             >
               Simulação
             </Link>

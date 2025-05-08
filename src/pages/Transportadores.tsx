@@ -68,7 +68,7 @@ const FeatureCard = ({ icon, title, description, delay }) => {
   );
 };
 
-const Step = ({ number, title, description, isLast, isActive }) => {
+const Step = ({ number, title, description, isLast = false, isActive }) => {
   return (
     <div className={`flex ${isLast ? '' : 'pb-8'} relative`}>
       {/* Line */}
@@ -212,18 +212,21 @@ const Transportadores = () => {
                   title="Crie sua conta" 
                   description="Registre-se como transportador e complete seu perfil com suas informações e documentos." 
                   isActive={true}
+                  isLast={false}
                 />
                 <Step 
                   number="2" 
                   title="Encontre oportunidades" 
                   description="Navegue pelas solicitações de envio disponíveis ou cadastre suas próximas viagens para encontrar correspondências." 
                   isActive={true}
+                  isLast={false}
                 />
                 <Step 
                   number="3" 
                   title="Aceite e colete" 
                   description="Aceite as entregas que combinam com sua rota e colete os itens no local combinado." 
                   isActive={false}
+                  isLast={false}
                 />
                 <Step 
                   number="4" 
