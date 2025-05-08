@@ -51,7 +51,7 @@ const FeaturesSection = () => {
                 <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
                 <p className="text-gray-600 mb-4">{feature.description}</p>
                 <a href="#" className="text-shappi-green flex items-center font-medium group">
-                  <span>Saiba mais</span>
+                  <span></span>
                   <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                 </a>
               </CardContent>
