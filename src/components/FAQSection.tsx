@@ -8,12 +8,12 @@ import {
 
 const faqs = [
   {
-    question: "Para quais países a Shappi envia?",
+    question: "Para quais países a Kargoo envia?",
     answer: "A Shappi oferece soluções de envio para mais de 220 países e territórios em todo o mundo. Nossa rede global garante que seus pacotes cheguem ao destino de forma eficiente e segura."
   },
   {
     question: "Como posso rastrear meu envio?",
-    answer: "Você pode rastrear facilmente seu envio fazendo login em sua conta Shappi e navegando até a seção 'Meus Envios'. Alternativamente, você pode usar o número de rastreamento fornecido em seu e-mail de confirmação em nossa página de rastreamento."
+    answer: "Você pode rastrear facilmente seu envio fazendo login em sua conta Kargoo e navegando até a seção 'Meus Envios'. Alternativamente, você pode usar o número de rastreamento fornecido em seu e-mail de confirmação em nossa página de rastreamento."
   },
   {
     question: "Quais são as tarifas de envio?",
@@ -25,11 +25,11 @@ const faqs = [
   },
   {
     question: "O seguro do pacote está disponível?",
-    answer: "Sim, a Shappi oferece proteção opcional para seus envios. Você pode adicionar seguro durante o processo de reserva para proteger seus pacotes contra perda ou danos até o valor declarado."
+    answer: "Sim, a Kargoo oferece proteção opcional para seus envios. Você pode adicionar seguro durante o processo de reserva para proteger seus pacotes contra perda ou danos até o valor declarado."
   },
   {
     question: "Quais itens são proibidos para envio?",
-    answer: "Os itens proibidos incluem, mas não se limitam a: materiais perigosos, substâncias ilegais, armas de fogo, moeda, e produtos perecíveis. Consulte nossa lista completa de itens proibidos antes de enviar para garantir a conformidade."
+    answer: "Os itens proibidos incluem, mas não se limitam a: materiais perigosos, substâncias ilegais, armas de fogo, moeda, e produtos perecíveis."
   }
 ];
 
