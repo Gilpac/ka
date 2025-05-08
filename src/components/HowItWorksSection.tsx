@@ -14,13 +14,13 @@ const steps = [
   },
   {
     number: "03",
-    title: "Imprima sua etiqueta",
-    description: "Assim que o pagamento for confirmado, imprima sua etiqueta de envio e anexe-a ao seu pacote."
+    title: "Deixe ou agende a coleta",
+    description: "Deixe seu pacote em qualquer local designado ou agende uma coleta conveniente."
   },
   {
     number: "04",
-    title: "Deixe ou agende a coleta",
-    description: "Deixe seu pacote em qualquer local designado ou agende uma coleta conveniente."
+    title: "Acompanhamento do Pedido",
+    description: "Depois de gerado o ID, você poderá acompanhar o status do seu pedido diretamente no nosso sistema."
   }
 ];
 
