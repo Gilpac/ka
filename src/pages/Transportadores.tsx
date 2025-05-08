@@ -12,7 +12,7 @@ const Transportadores = () => {
         <div className="shappi-container">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
             <div>
-              <h1 className="text-4xl md:text-5xl font-bold mb-4">Seja um Transportador Kargoo</h1>
+              <h1 className="text-4xl md:text-5xl font-bold mb-4">Seja um Transportador</h1>
               
               <h2 className="text-3xl md:text-4xl font-semibold mb-4">
                 Transforme suas viagens em{' '}
@@ -35,7 +35,7 @@ const Transportadores = () => {
             <div className="lg:flex justify-end">
               <div className="bg-white rounded-lg shadow-xl p-6">
                 <img 
-                  src="/lovable-uploads/83b66000-ff78-4607-a9a9-3f5f77955358.png" 
+                  src="/lovable-uploads/shopping.svg" 
                   alt="Transportador Kargoo" 
                   className="w-full h-auto"
                 />
