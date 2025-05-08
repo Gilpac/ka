@@ -39,7 +39,7 @@ const FeaturesSection = () => {
             Envie Com <span className="gradient-text">Confiança</span>
           </h2>
           <p className="text-lg text-gray-600">
-            A Shappi fornece uma solução completa de envio internacional com recursos projetados para tornar o envio simples e sem estresse.
+            A Kargoo fornece uma solução completa de envio internacional com recursos projetados para tornar o envio simples e sem estresse.
           </p>
         </div>
 
