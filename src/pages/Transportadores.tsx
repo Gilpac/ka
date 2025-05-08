@@ -1,347 +1,290 @@
 
-import React, { useEffect } from 'react';
-import { motion, useAnimation } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
-import { Package, TrendingUp, BadgeEuro, Truck } from 'lucide-react';
+import React from 'react';
+import PageLayout from '../components/PageLayout';
 import { Button } from '@/components/ui/button';
-import PageLayout from '@/components/PageLayout';
-
-const features = [
-  {
-    icon: <Truck className="h-8 w-8 text-kargoo-green" />,
-    title: 'Autonomia',
-    description: 'Trabalhe quando quiser, crie seu próprio horário e escolha os envios que melhor se adequam às suas necessidades.'
-  },
-  {
-    icon: <TrendingUp className="h-8 w-8 text-kargoo-green" />,
-    title: 'Ganhos Atrativos',
-    description: 'Ganhe dinheiro extra utilizando espaço livre em sua viagem. Monetize o espaço vazio em sua bagagem ou veículo.'
-  },
-  {
-    icon: <BadgeEuro className="h-8 w-8 text-kargoo-green" />,
-    title: 'Pagamento Seguro',
-    description: 'Receba pagamentos de forma rápida e segura com transferência direta para sua conta após a entrega confirmada.'
-  },
-  {
-    icon: <Package className="h-8 w-8 text-kargoo-green" />,
-    title: 'Suporte Contínuo',
-    description: 'Nossa equipe está disponível 24/7 para ajudar em qualquer situação, garantindo uma experiência tranquila.'
-  },
-];
-
-const FeatureCard = ({ icon, title, description, delay }) => {
-  const controls = useAnimation();
-  const [ref, inView] = useInView({
-    triggerOnce: true,
-    threshold: 0.2,
-  });
-
-  useEffect(() => {
-    if (inView) {
-      controls.start('visible');
-    }
-  }, [controls, inView]);
-
-  return (
-    <motion.div
-      ref={ref}
-      initial="hidden"
-      animate={controls}
-      variants={{
-        hidden: { opacity: 0, y: 20 },
-        visible: {
-          opacity: 1,
-          y: 0,
-          transition: { duration: 0.5, delay }
-        }
-      }}
-      className="bg-white rounded-xl p-6 shadow-sm border border-gray-100 card-hover-effect"
-    >
-      <div className="flex flex-col items-start">
-        <div className="p-3 bg-kargoo-green/10 rounded-lg mb-4">
-          {icon}
-        </div>
-        <h3 className="text-xl font-semibold mb-3">{title}</h3>
-        <p className="text-gray-600">{description}</p>
-      </div>
-    </motion.div>
-  );
-};
-
-const Step = ({ number, title, description, isLast = false, isActive }) => {
-  return (
-    <div className={`flex ${isLast ? '' : 'pb-8'} relative`}>
-      {/* Line */}
-      {!isLast && (
-        <div className="absolute left-4 top-4 bottom-0 w-0.5 bg-gradient-to-b from-kargoo-green to-kargoo-green-light"></div>
-      )}
-      
-      {/* Number Circle */}
-      <div className={`flex items-center justify-center w-8 h-8 rounded-full ${
-        isActive ? 'bg-kargoo-green text-white' : 'bg-kargoo-green-light text-kargoo-green'
-      } font-semibold mr-4 relative z-10`}>
-        {number}
-      </div>
-      
-      {/* Content */}
-      <div>
-        <h3 className="font-semibold text-lg">{title}</h3>
-        <p className="text-gray-600 mt-1">{description}</p>
-      </div>
-    </div>
-  );
-};
+import { Truck, Package, TrendingUp, Euro } from 'lucide-react';
 
 const Transportadores = () => {
-  const controls = useAnimation();
-  const [ref, inView] = useInView({
-    triggerOnce: true,
-    threshold: 0.1,
-  });
-
-  useEffect(() => {
-    if (inView) {
-      controls.start('visible');
-    }
-  }, [controls, inView]);
-
   return (
-    <PageLayout title="Seja um Transportador Kargoo">
-      <div className="space-y-16">
-        {/* Hero Section */}
-        <section className="mb-12">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+    <PageLayout title="Seja um Transportador" fullWidth>
+      {/* Hero Section */}
+      <section className="py-12 md:py-20 bg-white">
+        <div className="shappi-container">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
             <div>
-              <motion.h1 
-                className="text-3xl md:text-4xl font-bold mb-6"
-                initial={{ opacity: 0, y: -20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5 }}
-              >
-                Transforme suas viagens em <span className="gradient-text">oportunidades de renda</span>
-              </motion.h1>
-              <motion.p 
-                className="text-lg text-gray-700 mb-8"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 0.5, delay: 0.2 }}
-              >
-                Ganhe dinheiro extra transportando pacotes ao longo de rotas que você já percorre. 
-                A Kargoo conecta você a pessoas que precisam enviar itens para os mesmos locais para onde você está indo.
-              </motion.p>
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.4 }}
-              >
-                <Button 
-                  size="lg" 
-                  className="bg-kargoo-green hover:bg-kargoo-green/90 text-white rounded-full px-8 btn-hover-effect"
-                  onClick={() => window.location.href = "http://ka.free.nf/log/index.html"}
-                >
-                  Cadastre-se como Transportador
-                </Button>
-              </motion.div>
-            </div>
-            <div className="relative">
-              <motion.div
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.6, delay: 0.3 }}
-              >
-                <div className="relative">
-                  <img 
-                    src="/lovable-uploads/8d626038-57cc-4db5-9753-f2580d1eb05b.png"
-                    alt="Kargoo Transporters" 
-                    className="w-full h-auto rounded-lg shadow-lg"
-                  />
-                  <div className="absolute -bottom-4 -right-4 bg-white p-3 rounded-lg shadow-lg">
-                    <div className="flex items-center gap-2">
-                      <div className="w-2 h-2 rounded-full bg-kargoo-green animate-pulse"></div>
-                      <span className="text-sm font-medium">1.200+ transportadores ativos</span>
-                    </div>
-                  </div>
-                </div>
-              </motion.div>
-            </div>
-          </div>
-        </section>
-
-        {/* Benefits Section */}
-        <section className="py-12 bg-gradient-to-br from-white to-kargoo-gray-light rounded-xl p-8">
-          <div className="text-center max-w-3xl mx-auto mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Por que se tornar um <span className="gradient-text">Transportador Kargoo?</span>
-            </h2>
-            <p className="text-lg text-gray-600">
-              Aproveite benefícios exclusivos e transforme suas viagens em oportunidades de ganhos extras.
-            </p>
-          </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {features.map((feature, index) => (
-              <FeatureCard 
-                key={index} 
-                icon={feature.icon} 
-                title={feature.title} 
-                description={feature.description} 
-                delay={0.1 * index}
-              />
-            ))}
-          </div>
-        </section>
-
-        {/* How It Works Section */}
-        <motion.section 
-          ref={ref}
-          className="py-12"
-          initial="hidden"
-          animate={controls}
-          variants={{
-            hidden: { opacity: 0 },
-            visible: { opacity: 1, transition: { staggerChildren: 0.2 } }
-          }}
-        >
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-3xl font-bold mb-6">
-                Como funciona o <span className="gradient-text">processo?</span>
+              <h1 className="text-4xl md:text-5xl font-bold mb-4">Seja um Transportador Kargoo</h1>
+              
+              <h2 className="text-3xl md:text-4xl font-semibold mb-4">
+                Transforme suas viagens em{' '}
+                <span className="text-shappi-green">oportunidades de renda</span>
               </h2>
-              <div className="space-y-2">
-                <Step 
-                  number="1" 
-                  title="Crie sua conta" 
-                  description="Registre-se como transportador e complete seu perfil com suas informações e documentos." 
-                  isActive={true}
-                  isLast={false}
+              
+              <p className="text-lg mb-8">
+                Ganhe dinheiro extra transportando pacotes ao longo de rotas que você
+                já percorre. A Kargoo conecta você a pessoas que precisam enviar itens
+                para os mesmos locais para onde você está indo.
+              </p>
+              
+              <Button 
+                onClick={() => window.location.href = "http://ka.free.nf/log/index.html"} 
+                className="bg-shappi-green hover:bg-shappi-green/90 text-lg px-8 py-6">
+                Cadastre-se como Transportador
+              </Button>
+            </div>
+            
+            <div className="lg:flex justify-end">
+              <div className="bg-white rounded-lg shadow-xl p-6">
+                <img 
+                  src="/lovable-uploads/83b66000-ff78-4607-a9a9-3f5f77955358.png" 
+                  alt="Transportador Kargoo" 
+                  className="w-full h-auto"
                 />
-                <Step 
-                  number="2" 
-                  title="Encontre oportunidades" 
-                  description="Navegue pelas solicitações de envio disponíveis ou cadastre suas próximas viagens para encontrar correspondências." 
-                  isActive={true}
-                  isLast={false}
-                />
-                <Step 
-                  number="3" 
-                  title="Aceite e colete" 
-                  description="Aceite as entregas que combinam com sua rota e colete os itens no local combinado." 
-                  isActive={false}
-                  isLast={false}
-                />
-                <Step 
-                  number="4" 
-                  title="Entregue e receba" 
-                  description="Complete a entrega e receba seu pagamento diretamente em sua conta após a confirmação." 
-                  isLast={true}
-                  isActive={false}
-                />
+                <div className="mt-4 flex items-center text-shappi-green font-medium">
+                  <span className="w-3 h-3 bg-shappi-green rounded-full mr-2"></span>
+                  <p>1.200+ transportadores ativos</p>
+                </div>
               </div>
             </div>
-            <div className="bg-kargoo-green/5 rounded-xl p-8 border border-kargoo-green/20">
-              <div className="text-center mb-6">
-                <h3 className="text-2xl font-bold mb-2">Calculadora de Ganhos</h3>
-                <p className="text-gray-600">Quanto você pode ganhar como transportador Kargoo</p>
+          </div>
+        </div>
+      </section>
+
+      {/* Benefits Section */}
+      <section className="py-16 bg-gray-50">
+        <div className="shappi-container">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
+            Por que se tornar um <span className="text-shappi-green">Transportador Kargoo?</span>
+          </h2>
+          <p className="text-lg text-center mb-12">
+            Aproveite benefícios exclusivos e transforme suas viagens em oportunidades de ganhos extras.
+          </p>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="bg-white p-6 rounded-lg shadow hover:shadow-md transition-shadow">
+              <div className="w-12 h-12 bg-shappi-green/10 flex items-center justify-center rounded mb-4">
+                <Truck className="text-shappi-green" size={24} />
               </div>
+              <h3 className="text-xl font-bold mb-3">Autonomia</h3>
+              <p className="text-gray-700">
+                Trabalhe quando quiser, crie seu próprio horário e escolha os envios que melhor se 
+                adequam às suas necessidades.
+              </p>
+            </div>
+            
+            <div className="bg-white p-6 rounded-lg shadow hover:shadow-md transition-shadow">
+              <div className="w-12 h-12 bg-shappi-green/10 flex items-center justify-center rounded mb-4">
+                <TrendingUp className="text-shappi-green" size={24} />
+              </div>
+              <h3 className="text-xl font-bold mb-3">Ganhos Atrativos</h3>
+              <p className="text-gray-700">
+                Ganhe dinheiro extra utilizando espaço livre em sua viagem. Monetize o espaço 
+                vazio em sua bagagem ou veículo.
+              </p>
+            </div>
+            
+            <div className="bg-white p-6 rounded-lg shadow hover:shadow-md transition-shadow">
+              <div className="w-12 h-12 bg-shappi-green/10 flex items-center justify-center rounded mb-4">
+                <Euro className="text-shappi-green" size={24} />
+              </div>
+              <h3 className="text-xl font-bold mb-3">Pagamento Seguro</h3>
+              <p className="text-gray-700">
+                Receba pagamentos de forma rápida e segura com transferência direta para sua 
+                conta após a entrega confirmada.
+              </p>
+            </div>
+            
+            <div className="bg-white p-6 rounded-lg shadow hover:shadow-md transition-shadow">
+              <div className="w-12 h-12 bg-shappi-green/10 flex items-center justify-center rounded mb-4">
+                <Package className="text-shappi-green" size={24} />
+              </div>
+              <h3 className="text-xl font-bold mb-3">Suporte Contínuo</h3>
+              <p className="text-gray-700">
+                Nossa equipe está disponível 24/7 para ajudar em qualquer situação, 
+                garantindo uma experiência tranquila.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* How It Works Section */}
+      <section className="py-16">
+        <div className="shappi-container">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            Como funciona o <span className="text-shappi-green">processo?</span>
+          </h2>
+          
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-12">
+            <div className="space-y-12 relative">
+              <div className="absolute left-4 top-4 bottom-0 w-0.5 bg-shappi-green z-0"></div>
+              
+              <div className="flex items-start gap-8 relative z-10">
+                <div className="w-8 h-8 bg-shappi-green text-white rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                  1
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold mb-2">Crie sua conta</h3>
+                  <p className="text-gray-700">
+                    Registre-se como transportador e complete seu perfil com suas 
+                    informações e documentos.
+                  </p>
+                </div>
+              </div>
+              
+              <div className="flex items-start gap-8 relative z-10">
+                <div className="w-8 h-8 bg-shappi-green text-white rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                  2
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold mb-2">Encontre oportunidades</h3>
+                  <p className="text-gray-700">
+                    Navegue pelas solicitações de envio disponíveis ou cadastre suas próximas 
+                    viagens para encontrar correspondências.
+                  </p>
+                </div>
+              </div>
+              
+              <div className="flex items-start gap-8 relative z-10">
+                <div className="w-8 h-8 bg-shappi-green text-white rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                  3
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold mb-2">Aceite e colete</h3>
+                  <p className="text-gray-700">
+                    Aceite as entregas que combinam com sua rota e colete os itens no local 
+                    combinado.
+                  </p>
+                </div>
+              </div>
+              
+              <div className="flex items-start gap-8 relative z-10">
+                <div className="w-8 h-8 bg-shappi-green text-white rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                  4
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold mb-2">Entregue e receba</h3>
+                  <p className="text-gray-700">
+                    Complete a entrega e receba seu pagamento diretamente em sua conta 
+                    após a confirmação.
+                  </p>
+                </div>
+              </div>
+            </div>
+            
+            <div className="bg-gray-50 p-6 rounded-lg">
+              <h3 className="text-2xl font-bold text-center mb-4">Calculadora de Ganhos</h3>
+              <p className="text-center mb-8">
+                Quanto você pode ganhar como transportador Kargoo
+              </p>
+              
               <div className="space-y-4">
-                <div className="bg-white rounded-lg p-4 border border-gray-200 flex justify-between items-center">
+                <div className="bg-white p-4 rounded flex justify-between items-center">
                   <span className="font-medium">Entregas locais (média por dia)</span>
                   <span className="font-bold">€10 - €30</span>
                 </div>
-                <div className="bg-white rounded-lg p-4 border border-gray-200 flex justify-between items-center">
+                
+                <div className="bg-white p-4 rounded flex justify-between items-center">
                   <span className="font-medium">Entregas intermunicipais</span>
                   <span className="font-bold">€30 - €100</span>
                 </div>
-                <div className="bg-white rounded-lg p-4 border border-gray-200 flex justify-between items-center">
+                
+                <div className="bg-white p-4 rounded flex justify-between items-center">
                   <span className="font-medium">Entregas internacionais</span>
                   <span className="font-bold">€100 - €500</span>
                 </div>
-                <div className="bg-kargoo-green/10 rounded-lg p-4 border border-kargoo-green/30 mt-4">
-                  <div className="flex justify-between items-center">
-                    <span className="font-medium">Potencial mensal</span>
-                    <span className="font-bold text-kargoo-green">€500 - €2000</span>
-                  </div>
+                
+                <div className="bg-shappi-green/10 p-4 rounded flex justify-between items-center">
+                  <span className="font-medium">Potencial mensal</span>
+                  <span className="font-bold">€500 - €2000</span>
                 </div>
               </div>
             </div>
           </div>
-        </motion.section>
+        </div>
+      </section>
 
-        {/* Testimonials Section */}
-        <section className="py-12 bg-gradient-to-br from-kargoo-gray-light to-white rounded-xl p-8">
-          <div className="text-center max-w-3xl mx-auto mb-12">
-            <h2 className="text-3xl font-bold mb-4">
-              O que nossos <span className="gradient-text">transportadores dizem</span>
-            </h2>
-            <p className="text-lg text-gray-600">
-              Histórias reais de pessoas que transformaram suas viagens em oportunidades de renda.
-            </p>
+      {/* Testimonials Section */}
+      <section className="py-16 bg-gray-50">
+        <div className="shappi-container">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
+            O que nossos <span className="text-shappi-green">transportadores dizem</span>
+          </h2>
+          <p className="text-center mb-12">
+            Histórias reais de pessoas que transformaram suas viagens em oportunidades de renda.
+          </p>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="bg-white p-6 rounded-lg shadow">
+              <div className="flex text-shappi-green mb-4">
+                {'★★★★★'.split('').map((star, i) => (
+                  <span key={i}>{star}</span>
+                ))}
+              </div>
+              <p className="italic mb-4">
+                "Comecei como transportador para ganhar um dinheiro extra nas minhas viagens de 
+                trabalho. Hoje já consigo ganhar um valor considerável que complementa minha renda 
+                mensal."
+              </p>
+              <div>
+                <h4 className="font-bold">João Silva</h4>
+                <p className="text-gray-600">Transportador há 8 meses</p>
+              </div>
+            </div>
+            
+            <div className="bg-white p-6 rounded-lg shadow">
+              <div className="flex text-shappi-green mb-4">
+                {'★★★★★'.split('').map((star, i) => (
+                  <span key={i}>{star}</span>
+                ))}
+              </div>
+              <p className="italic mb-4">
+                "A Kargoo me permite otimizar minhas viagens pessoais. Faço entregas quando 
+                viajo para visitar minha família e isso paga facilmente os custos da minha viagem."
+              </p>
+              <div>
+                <h4 className="font-bold">Ana Oliveira</h4>
+                <p className="text-gray-600">Transportadora há 1 ano</p>
+              </div>
+            </div>
+            
+            <div className="bg-white p-6 rounded-lg shadow">
+              <div className="flex text-shappi-green mb-4">
+                {'★★★★★'.split('').map((star, i) => (
+                  <span key={i}>{star}</span>
+                ))}
+              </div>
+              <p className="italic mb-4">
+                "Como motorista profissional, a Kargoo me ajuda a maximizar meus ganhos 
+                aproveitando o espaço livre no meu veículo em rotas que já percorro diariamente."
+              </p>
+              <div>
+                <h4 className="font-bold">Carlos Mendes</h4>
+                <p className="text-gray-600">Transportador há 6 meses</p>
+              </div>
+            </div>
           </div>
-          <div className="grid md:grid-cols-3 gap-6">
-            {[
-              {
-                name: "João Silva",
-                role: "Transportador há 8 meses",
-                text: "Comecei como transportador para ganhar um dinheiro extra nas minhas viagens de trabalho. Hoje já consigo ganhar um valor considerável que complementa minha renda mensal."
-              },
-              {
-                name: "Ana Oliveira",
-                role: "Transportadora há 1 ano",
-                text: "A Kargoo me permite otimizar minhas viagens pessoais. Faço entregas quando viajo para visitar minha família e isso paga facilmente os custos da minha viagem."
-              },
-              {
-                name: "Carlos Mendes",
-                role: "Transportador há 6 meses",
-                text: "Como motorista profissional, a Kargoo me ajuda a maximizar meus ganhos aproveitando o espaço livre no meu veículo em rotas que já percorro diariamente."
-              }
-            ].map((testimonial, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-white p-6 rounded-xl shadow-sm border border-gray-100"
-              >
-                <div className="flex flex-col h-full">
-                  <div className="mb-4 text-kargoo-green">
-                    {"★".repeat(5)}
-                  </div>
-                  <p className="italic text-gray-600 mb-4 flex-grow">"{testimonial.text}"</p>
-                  <div className="mt-auto">
-                    <p className="font-semibold">{testimonial.name}</p>
-                    <p className="text-sm text-gray-500">{testimonial.role}</p>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </section>
+        </div>
+      </section>
 
-        {/* CTA Section */}
-        <section className="py-16 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-            className="max-w-3xl mx-auto"
-          >
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Pronto para começar a <span className="gradient-text">ganhar como transportador</span>?
-            </h2>
-            <p className="text-lg text-gray-700 mb-8">
-              Junte-se à comunidade de transportadores Kargoo e transforme suas viagens em oportunidades de renda.
-            </p>
-            <Button 
-              size="lg" 
-              className="bg-kargoo-green hover:bg-kargoo-green/90 text-white rounded-full px-8 btn-hover-effect"
-              onClick={() => window.location.href = "http://ka.free.nf/log/index.html"}
-            >
-              Cadastre-se como Transportador
-            </Button>
-          </motion.div>
-        </section>
-      </div>
+      {/* CTA Section */}
+      <section className="py-16 bg-shappi-green/10">
+        <div className="shappi-container text-center">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            Pronto para começar a <span className="text-shappi-green">ganhar como transportador</span>?
+          </h2>
+          
+          <p className="text-lg mb-12">
+            Junte-se à comunidade de transportadores Kargoo e transforme suas viagens em 
+            oportunidades de renda.
+          </p>
+          
+          <Button 
+            onClick={() => window.location.href = "http://ka.free.nf/log/index.html"} 
+            className="bg-shappi-green hover:bg-shappi-green/90 text-lg px-8 py-6">
+            Cadastre-se como Transportador
+          </Button>
+        </div>
+      </section>
     </PageLayout>
   );
 };

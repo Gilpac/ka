@@ -51,7 +51,18 @@ const Header = () => {
             >
               Como funciona
             </a>
-            <Link to="/simulacao" className="header-link font-medium text-shappi-green">Simulação</Link>
+            <Link 
+              to="/simulacao" 
+              className={`header-link ${location.pathname === '/simulacao' ? 'font-medium text-shappi-green' : ''}`}
+            >
+              Simulação
+            </Link>
+            <Link 
+              to="/transportadores" 
+              className={`header-link ${location.pathname === '/transportadores' ? 'font-medium text-shappi-green' : ''}`}
+            >
+              Transportadores
+            </Link>
             <a 
               href={location.pathname === '/' ? '#faq' : '/#faq'} 
               className="header-link"
@@ -105,7 +116,18 @@ const Header = () => {
             >
               Como funciona
             </a>
-            <Link to="/simulacao" className="header-link font-medium text-shappi-green">Simulação</Link>
+            <Link 
+              to="/simulacao" 
+              className={`header-link ${location.pathname === '/simulacao' ? 'font-medium text-shappi-green' : ''}`}
+            >
+              Simulação
+            </Link>
+            <Link 
+              to="/transportadores" 
+              className={`header-link ${location.pathname === '/transportadores' ? 'font-medium text-shappi-green' : ''}`}
+            >
+              Transportadores
+            </Link>
             <a 
               href={location.pathname === '/' ? '#faq' : '/#faq'} 
               className="header-link"
