@@ -6,7 +6,7 @@ import { Truck, Package, TrendingUp, Euro } from 'lucide-react';
 
 const Transportadores = () => {
   return (
-    <PageLayout title="Seja um Transportador" fullWidth>
+    <PageLayout title="Seja um Transportadr" fullWidth>
       {/* Hero Section */}
       <section className="py-12 md:py-20 bg-white">
         <div className="shappi-container">
