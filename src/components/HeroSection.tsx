@@ -37,7 +37,7 @@ const HeroSection = () => {
           <div className="lg:w-1/2">
             <div className="relative">
               <img 
-                src="/lovable-uploads/8d626038-57cc-4db5-9753-f2580d1eb05b.png" 
+                src="/lovable-uploads/checking.svg" 
                 alt="Kargoo Delivery Services" 
                 className="w-full h-auto max-w-xl mx-auto animate-float hover:animate-pulse-slow transition-all duration-300"
               />

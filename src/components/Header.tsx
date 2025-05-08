@@ -22,7 +22,7 @@ const Header = () => {
           <div className="flex items-center">
             <Link to="/" className="flex items-center">
               <img 
-                src="/lovable-uploads/checking.svg" 
+                src="/lovable-uploads/35db1ac0-44be-4e7f-88d0-76e3f8b8c35f.png" 
                 alt="Kargoo Logo" 
                 className="h-12 w-auto"
               />
